@@ -1,7 +1,3 @@
-# Sushi Monorepo
-
-Sushi 2.0 🍣
-
 ## Getting Started
 
 https://pnpm.io/installation
@@ -63,42 +59,10 @@ https://pnpm.io/installation
 
 `git checkout -b feature/example-app`
 
-<!-- `pnpm exec @sushiswap/cli create-app example-app` -->
-
-## Packages
-
-- `@sushiswap/chain`
-- `@sushiswap/cli`
-- `@sushiswap/currency`
-- `@sushiswap/exchange`
-- `@sushiswap/format`
-- `@sushiswap/graph-client`
-- `@sushiswap/hooks`
-- `@sushiswap/math`
-- `@sushiswap/eslint-config`
-- `@sushiswap/hardhat-config`
-- `@sushiswap/prettier-config`
-- `@sushiswap/typescript-config`
-- `@sushiswap/redux-logs`
-- `@sushiswap/redux-token-lists`
-- `@sushiswap/stargate`
-- `@sushiswap/tines`
-- `@sushiswap/token-lists`
-- `@sushiswap/ui`
-- `@sushiswap/wagmi`
-
 ### Creating a new package
 
 `git checkout -b feature/example-package`
 
-## Protocols
-
-- `@sushiswap/bentobox`
-- `@sushiswap/furo`
-- `@sushiswap/kashi`
-- `@sushiswap/miso`
-- `@sushiswap/sushiswap`
-- `@sushiswap/sushixswap`
 
 ### Creating a new protocol
 
