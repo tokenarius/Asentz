@@ -85,17 +85,17 @@ export const SushiBarSectionMobile: FC = () => {
           </div>
           <div className="flex flex-col">
             <Typography variant="lg" weight={600} className="text-slate-100">
-              Sushi Bar
+              ASNZ Bar
             </Typography>
             <Typography variant="sm" weight={400} className="-mt-1 text-slate-400">
-              Stake to earn trading fee from all pools on Sushi!
+              Earn ASNZ token from pools on xASNZ!
             </Typography>
           </div>
         </div>
         <Button onClick={() => setOpen(true)}>Stake / Unstake</Button>
         <Dialog open={open} onClose={handleClose}>
           <Dialog.Content className="pb-[84px]">
-            <Dialog.Header title="Sushi Bar" onClose={handleClose} />
+            <Dialog.Header title="ASNZ Bar" onClose={handleClose} />
             <div className="flex flex-col gap-3 py-3">
               <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
                 <Tab.List>
@@ -105,17 +105,17 @@ export const SushiBarSectionMobile: FC = () => {
                 <div className="flex flex-col justify-center gap-10 p-3">
                   <div className="flex flex-col items-center">
                     <Typography variant="sm" weight={400} className="text-center text-slate-300">
-                      Stake to earn trading fee from all pools on Sushi!
+                      Earn ASNZ token from pools on xASNZ!
                     </Typography>
                     <div className="flex items-center gap-2 mt-1">
                       <Typography variant="xs" className="text-center text-slate-400">
-                        APR (1m)
+                        APR (1y)
                       </Typography>
                       <Typography
                         variant="xs"
                         className="flex items-center gap-1 text-transparent bg-gradient-to-r from-red to-yellow bg-clip-text"
                       >
-                        {formatNumber(stats?.apr12m)}
+                        {/* {formatNumber(stats?.apr12m)} */} 5%
                         <Link.External href={chains[ChainId.ETHEREUM].getTokenUrl(XSUSHI_TOKEN.address)}>
                           <ExternalLinkIcon width={12} height={12} className="text-slate-200 hover:text-blue" />
                         </Link.External>

@@ -16,8 +16,8 @@ export enum AppType {
   Legacy = 'Sushi 1.0',
   Internal = 'Internal',
   Kashi = 'Lend & Borrow',
-  Analytics = 'Analytics',
-  Invest = 'Earn',
+  Analytics = 'Dashboard',
+  Invest = 'Pool & Staking',
   Partner = 'Partner',
 }
 
@@ -106,14 +106,14 @@ export function Header({
             }
           >
             <Select.Options className="w-[max-content] !bg-slate-700 -ml-5 mt-5 !max-h-[unset]">
-              <div className="grid grid-cols-1 gap-1 px-2 py-2 md:grid-cols-3">
+              <div className="grid grid-cols-1 gap-1 px-2 py-2 md:grid-cols-2">
                 <div>
                   <Typography variant="xs" weight={600} className="hidden px-2 mb-1 uppercase md:block text-slate-400">
                     Core
                   </Typography>
                   <Select.Option
                     as="a"
-                    href="https://www.sushi.com/swap"
+                    href="/swap"
                     key={AppType.Swap}
                     value={AppType.Swap}
                     className="!border-slate-700 !cursor-pointer px-2 flex flex-col gap-0 !items-start group"
@@ -125,7 +125,7 @@ export function Header({
                   </Select.Option>
                   <Select.Option
                     as="a"
-                    href="https://www.sushi.com/xswap"
+                    href="/xswap"
                     key={AppType.xSwap}
                     value={AppType.xSwap}
                     className="!border-slate-700 !cursor-pointer px-2 flex flex-col gap-0 !items-start group"
@@ -135,50 +135,15 @@ export function Header({
                       Cross-chain swapping made easy
                     </Typography>
                   </Select.Option>
-                  <Select.Option
-                    as="a"
-                    href="https://www.sushi.com/earn"
-                    key={AppType.Invest}
-                    value={AppType.Invest}
-                    className="!border-slate-700 !cursor-pointer px-2 flex flex-col gap-0 !items-start group"
-                  >
-                    {AppType.Invest}
-                    <Typography variant="xs" className="text-slate-400 group-hover:text-blue-100">
-                      Earn fees by providing liquidity
-                    </Typography>
-                  </Select.Option>
                 </div>
                 <div>
                   <Typography variant="xs" weight={600} className="hidden px-2 mb-1 uppercase md:block text-slate-400">
                     Products
                   </Typography>
-                  {/* <Select.Option
-                    as="a"
-                    href="https://www.sushi.com/kashi"
-                    key={AppType.Kashi}
-                    value={AppType.Kashi}
-                    className="!border-slate-700 !cursor-pointer px-2 flex flex-col gap-0 !items-start group"
-                  >
-                    Kashi
-                    <Typography variant="xs" className="text-slate-400 group-hover:text-blue-100">
-                      Lend & borrow money
-                    </Typography>
-                  </Select.Option> */}
+                  
                   <Select.Option
                     as="a"
-                    href="https://www.sushi.com/furo"
-                    key={AppType.Furo}
-                    value={AppType.Furo}
-                    className="!border-slate-700 !cursor-pointer px-2 flex flex-col gap-0 !items-start group"
-                  >
-                    {AppType.Furo}
-                    <Typography variant="xs" className="text-slate-400 group-hover:text-blue-100">
-                      Automate DAO salaries and vesting schedules
-                    </Typography>
-                  </Select.Option>
-                  <Select.Option
-                    as="a"
-                    href="https://www.sushi.com/analytics"
+                    href="/analytics"
                     key={AppType.Analytics}
                     value={AppType.Analytics}
                     className="!border-slate-700 !cursor-pointer px-2 flex flex-col gap-0 !items-start group"
@@ -188,36 +153,17 @@ export function Header({
                       Find the best opportunities
                     </Typography>
                   </Select.Option>
-                </div>
-                <div>
-                  <Typography variant="xs" weight={600} className="hidden px-2 mb-1 uppercase md:block text-slate-400">
-                    Links
-                  </Typography>
+
                   <Select.Option
                     as="a"
-                    href="https://www.sushi.com/blog"
-                    key={AppType.Blog}
-                    value={AppType.Blog}
+                    href="/earn"
+                    key={AppType.Invest}
+                    value={AppType.Invest}
                     className="!border-slate-700 !cursor-pointer px-2 flex flex-col gap-0 !items-start group"
                   >
-                    {AppType.Blog}
+                    {AppType.Invest}
                     <Typography variant="xs" className="text-slate-400 group-hover:text-blue-100">
-                      Stay up to date with Sushi
-                    </Typography>
-                  </Select.Option>
-                  <Select.Option
-                    as={Link.External}
-                    href="https://app.sushi.com"
-                    key={AppType.Legacy}
-                    value={AppType.Legacy}
-                    className="!border-slate-700 !cursor-pointer px-2 flex flex-col gap-0 !items-start !no-underline group"
-                  >
-                    <div className="flex items-center gap-1">
-                      <span>{AppType.Legacy}</span>
-                      <ExternalLinkIcon width={14} height={14} />
-                    </div>
-                    <Typography variant="xs" className="text-slate-400 group-hover:text-blue-100">
-                      Prefer the old app?
+                      Earn fees by providing liquidity
                     </Typography>
                   </Select.Option>
                 </div>

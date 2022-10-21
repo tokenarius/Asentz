@@ -13,13 +13,13 @@ export const Header = () => {
   return (
     <App.Header
       appType={AppType.Invest}
-      nav={
-        <App.NavItemList>
-          <App.NavItem href="https://www.sushi.com/swap" label="Swap" />
-          <App.NavItem href="https://www.sushi.com/earn" label="Earn" />
-          <BuyCrypto address={address} />
-        </App.NavItemList>
-      }
+      // nav={
+      //   <App.NavItemList>
+      //     <App.NavItem href="https://www.sushi.com/swap" label="Swap" />
+      //     <App.NavItem href="https://www.sushi.com/earn" label="Earn" />
+      //     <BuyCrypto address={address} />
+      //   </App.NavItemList>
+      // }
     >
       <div className="flex gap-2">
         <Wallet.Button
@@ -27,7 +27,7 @@ export const Header = () => {
           className="border-none shadow-md whitespace-nowrap"
           supportedNetworks={SUPPORTED_CHAIN_IDS}
         />
-        <NotificationCentre notifications={notifications} clearNotifications={clearNotifications} />
+        {/* <NotificationCentre notifications={notifications} clearNotifications={clearNotifications} /> */}
       </div>
     </App.Header>
   )

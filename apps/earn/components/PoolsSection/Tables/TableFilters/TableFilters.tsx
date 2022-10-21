@@ -15,7 +15,7 @@ export const TableFilters: FC<{ showAllFilters?: boolean }> = ({ showAllFilters 
 
   return (
     <>
-      <div className="flex gap-3 flex-wrap mb-4">
+      <div className="flex flex-wrap gap-3 mb-4">
         <Network.SelectorMenu
           networks={SUPPORTED_CHAIN_IDS}
           selectedNetworks={selectedNetworks}
@@ -27,7 +27,7 @@ export const TableFilters: FC<{ showAllFilters?: boolean }> = ({ showAllFilters 
             'transition-opacity ease-in duration-150 flex gap-3 flex-wrap'
           )}
         >
-          <Select
+          {/* <Select
             value={poolTypesValue}
             onChange={(values: string[]) =>
               setFilters({ selectedPoolTypes: values.length === 0 ? Object.keys(AVAILABLE_POOL_TYPE_MAP) : values })
@@ -71,8 +71,8 @@ export const TableFilters: FC<{ showAllFilters?: boolean }> = ({ showAllFilters 
                 </Select.Option>
               ))}
             </Select.Options>
-          </Select>
-          <div className="flex items-center bg-slate-700 rounded-xl gap-3 px-3 h-[44px]">
+          </Select> */}
+          {/* <div className="flex items-center bg-slate-700 rounded-xl gap-3 px-3 h-[44px]">
             <Typography variant="sm" weight={600} className="text-slate-200">
               Farms
             </Typography>
@@ -83,7 +83,7 @@ export const TableFilters: FC<{ showAllFilters?: boolean }> = ({ showAllFilters 
               uncheckedIcon={<XIcon />}
               checkedIcon={<CheckIcon />}
             />
-          </div>
+          </div> */}
           <TableFiltersSearchToken />
         </div>
       </div>

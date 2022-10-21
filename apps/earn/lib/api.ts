@@ -71,6 +71,9 @@ export const getPools = async (query?: GetPoolsQuery) => {
       chainIds,
       farmsOnly,
     })
+
+    console.log(crossChainPairs)
+    
     return crossChainPairs
   } catch (error) {
     console.log(error)

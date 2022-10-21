@@ -12,7 +12,7 @@ import { PairQuickHoverTooltip } from './PairQuickHoverTooltip'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-const COLUMNS = [NETWORK_COLUMN, NAME_COLUMN, TVL_COLUMN, VOLUME_COLUMN, FEES_COLUMN, APR_COLUMN]
+const COLUMNS = [NETWORK_COLUMN, NAME_COLUMN, TVL_COLUMN, VOLUME_COLUMN, FEES_COLUMN]
 
 const fetcher = ({
   url,
@@ -126,6 +126,7 @@ export const PoolsTable: FC = () => {
         pageSize={PAGE_SIZE}
         linkFormatter={rowLink}
       />
+
       <Table.Paginator
         hasPrev={pagination.pageIndex > 0}
         hasNext={

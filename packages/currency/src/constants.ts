@@ -305,6 +305,34 @@ export const WNATIVE: Record<keyof typeof WNATIVE_ADDRESS, Token> = {
   }),
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export const SUSHI_ADDRESS: AddressMap = {
   [ChainId.ETHEREUM]: '0x6B3595068778DD592e39A122f4f5a5cF09C90fE2',
   [ChainId.ROPSTEN]: '0x0769fd68dFb93167989C6f7254cd0D766Fb2841F',
@@ -333,7 +361,7 @@ export const SUSHI_ADDRESS: AddressMap = {
 export const SUSHI = addressMapToTokenMap(
   {
     decimals: 18,
-    symbol: 'SUSHI',
+    symbol: 'ASNZ',
     name: 'SushiToken',
   },
   SUSHI_ADDRESS
@@ -346,11 +374,46 @@ export const XSUSHI_ADDRESS = {
 export const XSUSHI = addressMapToTokenMap(
   {
     decimals: 18,
-    symbol: 'XSUSHI',
+    symbol: 'XASNZ',
     name: 'SushiBar',
   },
   XSUSHI_ADDRESS
 )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export const USDC_ADDRESS = {
   [ChainId.ETHEREUM]: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',

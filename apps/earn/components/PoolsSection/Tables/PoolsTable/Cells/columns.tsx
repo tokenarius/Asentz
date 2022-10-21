@@ -24,7 +24,7 @@ export const NETWORK_COLUMN: ColumnDef<Pair, unknown> = {
 
 export const NAME_COLUMN: ColumnDef<Pair, unknown> = {
   id: 'name',
-  header: 'Name',
+  header: 'Pool',
   cell: (props) => <PairNameCell row={props.row.original} />,
   size: 160,
   meta: {
@@ -78,7 +78,7 @@ export const VOLUME_COLUMN: ColumnDef<Pair, unknown> = {
 }
 
 export const FEES_COLUMN: ColumnDef<Pair, unknown> = {
-  header: 'Fees (24h)',
+  header: 'Volume (7D)',
   id: 'fees',
   // accessorFn: (row) => row.fees24h,
   cell: (props) => <PairFees24hCell row={props.row.original} />,

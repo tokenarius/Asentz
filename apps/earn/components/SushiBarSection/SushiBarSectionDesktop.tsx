@@ -79,14 +79,14 @@ export const SushiBarSectionDesktop: FC = () => {
   return (
     <section className="hidden md:flex">
       <div className="flex flex-col w-full gap-6">
-        <h4 className="font-semibold text-slate-50">Earn trading fees from all pools on Sushi!</h4>
+        <h4 className="font-semibold text-slate-50">Earn ASNZ token from pools on xASNZ!</h4>
         <div className="p-5 flex flex-col rounded-2xl bg-white bg-opacity-[0.02]">
           <div className="flex flex-col lg:flex-row">
             <div className="flex flex-col justify-center px-5">
-              <h4 className="mb-1 font-semibold text-slate-50 whitespace-nowrap">Sushi Bar</h4>
+              <h4 className="mb-1 font-semibold text-slate-50 whitespace-nowrap">ASNZ Bar</h4>
               <p className="text-sm text-slate-400">APR (1y)</p>
               <p className="flex items-center gap-1 text-transparent bg-gradient-to-r from-red to-yellow bg-clip-text">
-                {formatPercent(stats?.apr12m)}
+                {/* {formatPercent(stats?.apr12m)} */} 5%
                 <Link.External href={chains[ChainId.ETHEREUM].getTokenUrl(XSUSHI_TOKEN.address)}>
                   <ExternalLinkIcon width={16} height={16} className="text-slate-200 hover:text-blue" />
                 </Link.External>

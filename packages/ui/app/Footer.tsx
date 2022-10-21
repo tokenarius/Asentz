@@ -20,46 +20,15 @@ const config: Record<
   | Array<Record<string, Record<string, { href: string; rel?: string; target?: string }>>>
 > = {
   Services: {
-    Swap: { href: 'https://www.sushi.com/swap' },
-    Earn: { href: 'https://www.sushi.com/earn' },
-    'Lending & Borrowing': { href: 'https://app.sushi.com/kashi', target: '_blank', rel: 'noopener noreferrer' },
-    'Miso Launchpad': { href: 'https://app.sushi.com/miso', target: '_blank', rel: 'noopener noreferrer' },
-    'Shoyu NFT': { href: 'https://shoyunft.com', target: '_blank', rel: 'noopener noreferrer' },
-    Payments: { href: 'https://www.sushi.com/furo' },
-    Analytics: { href: 'https://www.sushi.com/analytics' },
+    'Dashboard': { href: '/analytics' },
+    'Swap': { href: '/swap' },
+    'xSwap': { href: '/xswap' },
+    'Pool & Staking': { href: '/earn' },
   },
   Help: {
-    'About Us': { href: 'https://docs.sushi.com', target: '_blank', rel: 'noopener noreferrer' },
-    'Discord Support': { href: 'https://discord.gg/NVPXN4e', target: '_blank', rel: 'noopener noreferrer' },
-    'Twitter Support': { href: 'https://twitter.com/sushiswap', target: '_blank', rel: 'noopener noreferrer' },
-    'Forum Support': { href: 'https://forum.sushi.com', target: '_blank', rel: 'noopener noreferrer' },
-  },
-  Developers: {
-    GitBook: { href: 'https://docs.sushi.com', target: '_blank', rel: 'noopener noreferrer' },
-    GitHub: { href: 'https://github.com/sushiswap', target: '_blank', rel: 'noopener noreferrer' },
-    Development: { href: 'https://dev.sushi.com', target: '_blank', rel: 'noopener noreferrer' },
-    SushiGuard: { href: 'https://docs.openmev.org', target: '_blank', rel: 'noopener noreferrer' },
-  },
-  Items: [
-    {
-      Governance: {
-        'Forum & Proposals': { href: 'https://forum.sushi.com', target: '_blank', rel: 'noopener noreferrer' },
-        Vote: { href: 'https://snapshot.org/#/sushigov.eth', target: '_blank', rel: 'noopener noreferrer' },
-      },
-    },
-    {
-      Partners: {
-        KlimaDAO: { href: 'https://www.klimadao.finance/', target: '_blank', rel: 'noopener noreferrer' },
-        'Manifold Finance': { href: 'https://www.manifoldfinance.com/', target: '_blank', rel: 'noopener noreferrer' },
-      },
-    },
-  ],
-  Protocol: {
-    'Apply for Onsen': {
-      href: 'https://docs.google.com/document/d/1VcdrqAn1sR8Wa0BSSU-jAl68CfoECR62LCzIyzUpZ_U',
-      target: '_blank',
-      rel: 'noopener noreferrer',
-    },
+    'About Us': { href: '', target: '_blank', rel: 'noopener noreferrer' },
+    'Discord Support': { href: '', target: '_blank', rel: 'noopener noreferrer' },
+    'Twitter Support': { href: '', target: '_blank', rel: 'noopener noreferrer' },
   },
 }
 
@@ -93,25 +62,26 @@ export function Footer(props: FooterProps): JSX.Element {
       <Container maxWidth="5xl" className="grid grid-cols-1 md:grid-cols-[176px_auto] mx-auto px-4 gap-4">
         <div className="flex flex-col gap-5">
           <div className="flex items-center justify-start gap-3 pt-2">
-            <SushiWithTextIcon height={20} className="text-slate-50" />
+            {/* <SushiWithTextIcon height={20} className="text-slate-50" /> */}
+            ASENTZ 1.0
           </div>
           <div className="text-sm sm:text-[0.625rem] leading-5 sm:leading-4 text-slate-400">
             Our community is building a comprehensive decentralized trading platform for the future of finance. Join us!
           </div>
           <div className="flex items-center gap-4">
-            <a href="https://github.com/sushiswap" target="_blank" rel="noopener noreferrer">
+            <a href="/sushiswap" target="_blank" rel="noopener noreferrer">
               <GithubIcon width={16} className="text-slate-300 hover:text-slate-50" />
             </a>
-            <a href="https://twitter.com/sushiswap" target="_blank" rel="noopener noreferrer">
+            <a href="/sushiswap" target="_blank" rel="noopener noreferrer">
               <TwitterIcon width={16} className="text-slate-300 hover:text-slate-50" />
             </a>
-            <a href="https://instagram.com/instasushiswap" target="_blank" rel="noopener noreferrer">
+            <a href="/instasushiswap" target="_blank" rel="noopener noreferrer">
               <InstagramIcon width={16} className="text-slate-300 hover:text-slate-50" />
             </a>
-            <a href="https://medium.com/sushiswap-org" target="_blank" rel="noopener noreferrer">
+            <a href="/sushiswap-org" target="_blank" rel="noopener noreferrer">
               <MediumIcon width={16} className="text-slate-300 hover:text-slate-50" />
             </a>
-            <a href="https://discord.gg/NVPXN4e" target="_blank" rel="noopener noreferrer">
+            <a href="/NVPXN4e" target="_blank" rel="noopener noreferrer">
               <DiscordIcon width={16} className="text-slate-300 hover:text-slate-50" />
             </a>
           </div>
@@ -137,10 +107,10 @@ export function Footer(props: FooterProps): JSX.Element {
       <Container maxWidth="5xl" className="mx-auto mt-20 mb-5">
         <div className="flex justify-between py-2 mx-4 border-t border-slate-800">
           <Typography variant="xs" className="text-slate-400">
-            Copyright © 2022 Sushi. All rights reserved.
+            Copyright © 2022 ASENTZ. All rights reserved.
           </Typography>
           <div className="flex divide-x divide-slate-200/20 gap-">
-            <Link.Internal href="https://www.sushi.com/terms-of-use" passHref={true}>
+            <Link.Internal href="/terms-of-use" passHref={true}>
               <Typography as="a" variant="xs" weight={500} className="px-3 text-slate-300">
                 Terms of Use
               </Typography>
